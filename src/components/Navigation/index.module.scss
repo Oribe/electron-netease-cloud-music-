@@ -1,0 +1,9 @@
+@import "../../styles/var.scss";
+.navgator {
+  width: 100%;
+  height: $header-height;
+  background-color: rgba(246, 246, 246, $header-opacity);
+  position: absolute;
+  left: 0;
+  top: 0;
+}

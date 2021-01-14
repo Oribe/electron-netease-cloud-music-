@@ -1,0 +1,8 @@
+@import "../../styles/var.scss";
+
+.headerContainer {
+  width: 100%;
+  height: $header-height;
+  -webkit-app-region: drag;
+  background-color: rgba(246, 246, 246, $header-opacity);
+}
