@@ -1,4 +1,18 @@
 @import "../../styles/var.scss";
+
+@mixin arrow($deg, $left, $right) {
+  content: "";
+  width: 9px;
+  height: 9px;
+  display: block;
+  border-top: 1px solid #666;
+  border-left: 1px solid #666;
+  position: absolute;
+  left: $left;
+  top: $right;
+  transform: rotateZ($deg);
+}
+
 .navgator {
   width: 100%;
   height: $header-height;
@@ -6,4 +20,38 @@
   position: absolute;
   left: 0;
   top: 0;
+
+  .arrowContainer {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+  }
+
+  .arrowLeft,
+  .arrowRight {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    &:hover {
+      border-radius: 10px;
+      background-color: #ccc;
+      transition: background-color 300ms ease;
+    }
+  }
+
+  .arrowRight {
+    margin-left: 12px;
+  }
+
+  .arrowLeft {
+    &::after {
+      @include arrow(-45deg, 36%, 30%);
+    }
+  }
+  .arrowRight {
+    &::after {
+      @include arrow(135deg, 16%, 30%);
+    }
+  }
 }
