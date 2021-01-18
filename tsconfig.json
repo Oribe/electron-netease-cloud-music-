@@ -12,10 +12,29 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "paths": {
-      "*": ["node_modules/*"]
+      "*": [
+        "node_modules/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@styles/*": [
+        "src/styles/*"
+      ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
+      "@src/*": [
+        "src/*"
+      ],
     }
   },
   "include": [
-    "src/**/*"
-, "electron/index.ts", "electron/renderer.ts"  ]
+    "src/**/*",
+    "electron/index.ts",
+    "electron/renderer.ts"
+  ]
 }

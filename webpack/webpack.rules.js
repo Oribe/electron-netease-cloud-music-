@@ -24,4 +24,25 @@ module.exports = [
       },
     },
   },
+  {
+    test: /\.(scss|sass|css)$/,
+    use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }],
+  },
+  {
+    test: /\.(png|jpg|gif|jpeg)$/i,
+    use: [
+      {
+        loader: 'url-loader',
+        options: {
+          limit: 1024,
+        }
+      }
+    ]
+  },
+  {
+    test: /\.svg$/,
+    use: {
+      loader: "@svgr/webpack"
+    }
+  }
 ];

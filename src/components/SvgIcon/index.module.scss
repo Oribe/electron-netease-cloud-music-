@@ -1,0 +1,10 @@
+.svgWrapper {
+  display: inline-block;
+  img,
+  svg {
+    width: 22px;
+    height: auto;
+    vertical-align: middle;
+    font-weight: 100;
+  }
+}

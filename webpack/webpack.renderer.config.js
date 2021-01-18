@@ -1,10 +1,7 @@
 const rules = require("./webpack.rules");
 const plugins = require("./webpack.plugins");
+const path = require('path')
 
-rules.push({
-  test: /\.(scss|sass|css)$/,
-  use: [{ loader: "style-loader" }, { loader: "css-loader" }, { loader: "sass-loader" }],
-});
 
 module.exports = {
   module: {
@@ -13,5 +10,12 @@ module.exports = {
   plugins: plugins,
   resolve: {
     extensions: [".js", ".ts", ".jsx", ".tsx", ".css"],
+    alias: {
+      "@components": path.resolve(__dirname, '../src/components'),
+      "@assets": path.resolve(__dirname, '../src/assets'),
+      "@styles": path.resolve(__dirname, '../src/styles'),
+      "@pages": path.resolve(__dirname, '../src/pages'),
+      "@src": path.resolve(__dirname, '../src'),
+    },
   },
 };
