@@ -1,0 +1,11 @@
+@import "../../styles/var.scss";
+
+.searchHistoryWrapper {
+  width: 354px;
+  position: absolute;
+  top: $header-height;
+  right: 0;
+  bottom: $footer-height;
+  z-index: 10;
+  box-shadow: -2px 0px 4px #f4f4f4;
+}

@@ -1,9 +1,6 @@
-import SvgIcon from "@components/SvgIcon";
+import Link from "@components/Link";
 import { Routers } from "@src/routers";
-import React from "react";
-import { FC } from "react";
-import { Link } from "react-router-dom";
-
+import React, { FC } from "react";
 import styles from "./index.module.scss";
 
 const Menu: FC<Props> = (props) => {
@@ -13,10 +10,7 @@ const Menu: FC<Props> = (props) => {
         const { label, path, icon } = item;
         return (
           <li key={label} className={styles.menuItem}>
-            <Link to={path}>
-              <SvgIcon icon={icon} />
-              <span className={styles.label}>{label}</span>
-            </Link>
+            <Link path={path} label={label} icon={icon} />
           </li>
         );
       })}

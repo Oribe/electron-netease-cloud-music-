@@ -1,10 +1,19 @@
 .svgWrapper {
-  display: inline-block;
+  display: inline-flex;
+  font-size: 21px;
+  font-weight: 400;
+  vertical-align: middle;
+  align-items: center;
+  color: inherit;
   img,
   svg {
-    width: 22px;
+    color: inherit;
     height: auto;
+    margin: 0;
     vertical-align: middle;
-    font-weight: 100;
+  }
+
+  path {
+    fill: var(--color);
   }
 }

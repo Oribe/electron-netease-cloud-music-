@@ -5,4 +5,10 @@
   height: $header-height;
   -webkit-app-region: drag;
   background-color: rgba(246, 246, 246, $header-opacity);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .functionBar {
+  }
 }

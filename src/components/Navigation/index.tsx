@@ -1,15 +1,8 @@
-import React, { FC } from "react";
-
-import styles from "./index.module.scss";
+import React from "react";
+import { FC } from "react";
 
 const Navigation: FC = () => {
-  return (
-    <div className={styles.navgator}>
-      <div className={styles.arrowContainer}>
-        <div className={styles.arrowLeft}></div>
-        <div className={styles.arrowRight}></div>
-      </div>
-    </div>
-  );
+  return <div>导航栏</div>;
 };
+
 export default Navigation;

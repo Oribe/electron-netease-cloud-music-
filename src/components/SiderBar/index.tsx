@@ -1,7 +1,7 @@
 import Menu from "@components/Menu";
 import { routers } from "@src/routers";
 import React, { FC } from "react";
-import Navigation from "../Navigation";
+import Navigation from "../History";
 import User from "../User";
 
 import styles from "./index.module.scss";

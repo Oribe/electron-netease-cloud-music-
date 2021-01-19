@@ -42,7 +42,12 @@ module.exports = [
   {
     test: /\.svg$/,
     use: {
-      loader: "@svgr/webpack"
-    }
+      loader: '@svgr/webpack',
+      options: {
+        icon: true
+        // dimensions: true,
+        // typescript: true
+      }
+    },
   }
 ];

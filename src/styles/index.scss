@@ -1,3 +1,5 @@
+@import "./var.scss";
+
 body {
   width: 100vw;
   height: 100vh;
@@ -25,12 +27,39 @@ img {
 }
 
 a {
-  color: #000;
   text-decoration: none;
 }
 
 ul {
   list-style: none;
+}
+
+input {
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  color: $main-color;
+  text-decoration: none;
+  &[type="text"] {
+    padding: 0;
+  }
+  &:hover {
+    outline: none;
+  }
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: #b5b5b5;
+  }
+}
+
+:root {
+  --main-color: #393939;
+  --main-active-color: #d5524b;
 }
 
 #app {
