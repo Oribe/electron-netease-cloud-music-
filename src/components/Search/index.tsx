@@ -1,7 +1,6 @@
-import React, { ChangeEvent, FC, useRef, useState } from "react";
-import { debounce, throttle } from "lodash-es";
-import styles from "./index.module.scss";
 import SvgSearch from "@assets/svg/svg_search.svg";
+import React, { ChangeEvent, FC, KeyboardEvent, useRef, useState } from "react";
+import styles from "./index.module.scss";
 
 const Search: FC = () => {
   const [value, setValue] = useState<string>();
@@ -19,15 +18,15 @@ const Search: FC = () => {
    */
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     event.persist();
-    console.log("event", event.target.value);
     setValue(event.target.value);
   };
 
   /**
    * 监听按下回车键
    */
-  const handleOnKeyDown = () => {
-    //
+  const handleOnKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    event.persist();
+    console.log("回车搜索", event.ctrlKey);
   };
 
   return (
@@ -39,7 +38,7 @@ const Search: FC = () => {
         ref={inputRef}
         type="text"
         placeholder="搜索"
-        onChange={throttle(handleInputChange, 10000)}
+        onChange={handleInputChange}
         onKeyDown={handleOnKeyDown}
       />
       {value && (
